@@ -1,0 +1,1623 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "578f356f-1669-4873-ac9c-025368593eb3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'abc def ghi    '"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "txt = \"    abc def ghi    \"\n",
+    "txt.lstrip()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "a23411aa-7c90-4eee-9ce6-9430d2c3fe28",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'abc def ghi'"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "txt = \"    abc def ghi    \"\n",
+    "txt.strip()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "b85ed617-b1fe-4b51-8683-c5cfec2af7ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'    abc def ghi'"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "txt = \"    abc def ghi    \"\n",
+    "txt.rstrip()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7e7198c5-a531-41d5-9de1-5270ce936c2a",
+   "metadata": {},
+   "source": [
+    "List"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "b2c77f10-f05d-4217-b9f8-9ee7a38efa95",
+   "metadata": {},
+   "source": [
+    "1) List is an ordered sequence of items.\n",
+    "\n",
+    "2) We can have different data types under a list. E.g we can have integer, float and string itms in a same list."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a75d6f75-7a27-4bcf-b5c1-3e9f9cd9eab5",
+   "metadata": {},
+   "source": [
+    "List creation"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "775849d5-efdf-4ed7-b78f-c865c09fc11b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list1 = [] # empty list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "51015ca4-29c7-472e-a953-57e945fb8fe3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'list'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(type(list1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "a646979b-a1fa-4ff0-bd29-d6c66423aa1a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list2 = [10, 30, 60]    # list of integers numbers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "76f1643d-f878-4acc-81a6-12f36aebd8b5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list3 = [10.77, 30.66, 60, 89]  # list of float numbers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "b6df0e77-54ee-411f-b037-958547250775",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list4 = ['one', 'two', 'three']  # list of strings"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "18847aa6-6126-4e45-83af-e3b3b567c100",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list5 = ['Asif', 25, [50, 100], [150, 90]] # list or strings"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "45c69350-9f70-491b-993c-4334d48f98f8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list6 = [100, 'Asif', 17.765]  # list of mixed data types"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "c99b6b1b-db55-45cb-8bc5-acd1d49915e7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list7 = ['Asif', 25, [50,100],[150, 90], {'John', 'David'}]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "2d953f91-8def-43da-84c3-42c0cab7c0bc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(list6)  # length of list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "b3cfa379-0dd3-4e10-9bf3-cf980f1982a7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list2[0] # Retreive first element of the lsit"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "91e25a37-b3d6-47e6-aa6f-0fee0024ff21",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'one'"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list4[0] # Retreive first element of the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "56fd02ee-60c4-4f51-9c6d-8deae9d01cd5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three']"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "c326e8f8-38d9-48b3-8c48-605980cf4f57",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'o'"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list4[0][0] # Nested indexing - Access the first character of first list element"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "7fc79c60-4209-40a9-916a-33603df7abf0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'three'"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list4[-1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "d1581920-cf25-4b54-9023-814c20dbf8b3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[150, 90]"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list5[-1] # last item of the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "8d0d5446-e6fc-4c43-aef2-e2fb5b5dff39",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "b2717fd3-71d7-40bb-a483-f4f4ed1f4ffc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three']"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[0:3] # Return all items from 0th to 3rd index location excluding the item"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "48f81c76-e71c-4b17-82ef-b08cb6d46f09",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['three', 'four', 'five']"
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[2:5] # list all items from 2nd to 5th index location excluding the item"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "dd0a22a0-cb5f-486c-bd63-5b50fbe07246",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two']"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[:2] # Return first two items"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "6e761524-b56c-4b75-a306-2961c21bcf88",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 52,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[-3:] # Return last three items"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "09187169-141c-471a-a4cc-38f7ae925cb5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['seven', 'eight']"
+      ]
+     },
+     "execution_count": 54,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[-2:] # Return last two items"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "2bb02746-b2d8-4a46-87bb-e06d28fd9915",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'eight'"
+      ]
+     },
+     "execution_count": 56,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[-1] # Return last item of the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "b05e95d7-f5e6-4ea3-92e9-0dbdaf0bcf0c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist[:] # Return whole list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "178a1ed9-d823-4fc3-ae20-78dc3531f6bb",
+   "metadata": {},
+   "source": [
+    "Add, Remove & Change Items"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "c6bdf97f-fb05-4fbf-ba4e-b4a49376d94e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "6c857c7d-5fa3-4fb8-ad53-aac390be0d6e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist.append('nine')  # Add an item to the end of the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "df73ce76-9efc-484c-b2d1-e077d6b6a35d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']"
+      ]
+     },
+     "execution_count": 67,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "67732092-2ec0-488e-ac04-7fc6eecd9b7f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist.insert(9,'ten') # Add item at index location 9 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "22425461-f699-494b-b0ef-b8c9225f3a8d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']"
+      ]
+     },
+     "execution_count": 71,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "78dfd07e-c101-49f6-85ab-7ccc1852d35f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist.insert(1, 'ONE') # Add item at index location 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "id": "e221961e-b6bd-40e5-b3ed-4fcee9f5ef89",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one',\n",
+       " 'ONE',\n",
+       " 'two',\n",
+       " 'three',\n",
+       " 'four',\n",
+       " 'five',\n",
+       " 'six',\n",
+       " 'seven',\n",
+       " 'eight',\n",
+       " 'nine',\n",
+       " 'ten']"
+      ]
+     },
+     "execution_count": 75,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "id": "332b97b9-b76f-48b3-9640-65c76d281c57",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']"
+      ]
+     },
+     "execution_count": 77,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist.remove('ONE')  # Remove item \"ONE\"\n",
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "id": "dd617882-303b-40e9-a4a7-2f9d23fa0980",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']"
+      ]
+     },
+     "execution_count": 79,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist.pop() # Remove last item of the list\n",
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "id": "9dae26e4-ac2c-49e8-9f5e-93b28e630504",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'nine'"
+      ]
+     },
+     "execution_count": 81,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist.pop(8) # Remove item at index location 8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "id": "436b36cf-baa0-4b32-85ef-9dfd6abfc7da",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 83,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "a3244549-ab5b-471f-a876-733f19b5b792",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven']"
+      ]
+     },
+     "execution_count": 85,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "del mylist[7] # Remove item at index location 7\n",
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "id": "80867500-1d6f-44ec-be52-6300c7bef9b0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 'four', 'five', 'six', 'seven']"
+      ]
+     },
+     "execution_count": 87,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Change value of the string\n",
+    "mylist[0] = 1\n",
+    "mylist[1] = 2\n",
+    "mylist[2] = 3 \n",
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "id": "d88d449a-e834-4a02-b914-7fa2ff95abcf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[]"
+      ]
+     },
+     "execution_count": 89,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist.clear() # Empty list / Delete all items in the list\n",
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "id": "1a0cfb1d-6787-46c8-894f-4f38ffc36ed3",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'mylist' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[91], line 2\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;28;01mdel\u001b[39;00m mylist \u001b[38;5;66;03m# Delete the whole list\u001b[39;00m\n\u001b[1;32m----> 2\u001b[0m mylist\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'mylist' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "del mylist # Delete the whole list\n",
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e1a9b3b-dd29-4a74-9652-4a17eb4de79f",
+   "metadata": {},
+   "source": [
+    "Copy List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "id": "95cbca96-b681-456d-a82d-7f93b11004a7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist = ['one', 'two' , 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 96,
+   "id": "a431511b-9769-4d0d-9add-b523ce6c0aab",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist1 = mylist # create a new reference \"mylist1\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 98,
+   "id": "5fe9118b-f0d8-4719-ae5c-b2428f1ad1a2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1905572059776, 1905572059776)"
+      ]
+     },
+     "execution_count": 98,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "id(mylist), id(mylist1) # The address of both mylist & mylist1 will be same"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "id": "2dda2390-fd8c-431f-be4e-807300aa0409",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist2 = mylist.copy()  # create a copy of the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 102,
+   "id": "19e3ae23-72d3-4cc2-bb71-4372fa6ee770",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1905572062848"
+      ]
+     },
+     "execution_count": 102,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "id(mylist2) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 104,
+   "id": "3a98953a-192f-4416-8a6b-bc33e15ffeed",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "mylist[0] = 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 106,
+   "id": "39f320af-ccea-45fd-9b86-be62a38fa0e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']"
+      ]
+     },
+     "execution_count": 106,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "id": "219752de-d4c4-4647-996f-a9353b86e8f6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']"
+      ]
+     },
+     "execution_count": 108,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist1 # mylist1 will be also impacted as it is pointing to the same list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "fd916650-04f4-4e78-a3ea-fa64d895fb8c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']"
+      ]
+     },
+     "execution_count": 110,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist2 # copy of list won't be impacted due to changes made on the original list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f3d6d9a1-d1d7-4ae5-a3f5-6b1e5abd5500",
+   "metadata": {},
+   "source": [
+    "Join Lists"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "id": "81f325fa-608c-47ca-893f-cc904f0fde4b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list1 = ['one', 'two', 'three', 'four']\n",
+    "list2 = ['five', 'six', 'seven', 'eight']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "id": "762fccd7-6ca7-4734-8d81-e2652d1a0e00",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 115,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list3 = list1 + list2  # Join two lists by '+' operator\n",
+    "list3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "id": "1238b34a-4dfb-4e05-8af9-b1d6f939ef6d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 117,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.extend(list2) # Append list2 with list1\n",
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d4b86a69-5011-4497-89a5-49fc794d074c",
+   "metadata": {},
+   "source": [
+    "List Membership"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "id": "4efc99b2-9e48-4621-b7d0-c166111dda39",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 120,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 122,
+   "id": "0e837bb8-a7e8-48fb-a274-64a148ea2267",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 122,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "'one' in list1 # check if 'one' exist in the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "id": "9d8c30ab-622a-4916-a054-43eec35c0172",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 124,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "'ten' in list1 # check if 'ten' exist in the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "id": "e11701ab-d68e-46dc-b2a1-9957c6144881",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Three is present in the list\n"
+     ]
+    }
+   ],
+   "source": [
+    "if 'three' in list1:\n",
+    "    print('Three is present in the list')\n",
+    "else:\n",
+    "    print('Three is not present in the list')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "id": "2f379b15-b6e4-4351-a949-6467792998cb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "eleven is not present in the list\n"
+     ]
+    }
+   ],
+   "source": [
+    "if 'eleven' in list1:\n",
+    "    print('eleven is present in the list')\n",
+    "else:\n",
+    "    print('eleven is not present in the list')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "04df63d6-bd31-4ca0-9f4a-bc10367411db",
+   "metadata": {},
+   "source": [
+    "Reverse & Sort List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "id": "acd8d1ae-36ac-48fa-a6ca-7fedd08ec6e8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 131,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "id": "54a3dce2-d42f-4c24-89bb-b43d542581f3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one']"
+      ]
+     },
+     "execution_count": 133,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1.reverse() # Reverse the list\n",
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "id": "a4275438-c393-41a3-9cbd-4a53e980d379",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 135,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1 = list1[::-1] # Reverse the list\n",
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "id": "a6a6500c-19fe-4edf-ad1c-8953deb0181c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[2, 5, 9, 12, 34, 88, 99]"
+      ]
+     },
+     "execution_count": 137,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist3 = [9, 5, 2, 99, 12, 88, 34]\n",
+    "mylist3.sort()  # Sort list in ascending order\n",
+    "mylist3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "id": "0f466332-a044-4918-ab42-9992f84af049",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[99, 88, 34, 12, 9, 5, 2]"
+      ]
+     },
+     "execution_count": 139,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist3 = [9, 5, 2, 99 ,12, 88, 34]\n",
+    "mylist3.sort(reverse=True)   # Sort list in descending order\n",
+    "mylist3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "id": "22f520c5-3bb6-443a-884f-822ea2cfe07f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[11, 21, 33, 65, 88, 98]"
+      ]
+     },
+     "execution_count": 141,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist4 = [88, 65, 33, 21, 11, 98]\n",
+    "sorted(mylist4)    # return a new list containing all items of iterabel in ascending order"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "id": "fa22ab00-edd5-46e5-92f7-38e836243ac4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[88, 65, 33, 21, 11, 98]"
+      ]
+     },
+     "execution_count": 143,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "mylist4"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8c4a338f-0476-4e06-bf78-833e66cb3389",
+   "metadata": {},
+   "source": [
+    "Loop through a list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 146,
+   "id": "87f791a4-dd60-4408-861b-9a073b0fba13",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']"
+      ]
+     },
+     "execution_count": 146,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 148,
+   "id": "c42287e7-7625-453a-b7bc-33f797fc23fd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "one\n",
+      "two\n",
+      "three\n",
+      "four\n",
+      "five\n",
+      "six\n",
+      "seven\n",
+      "eight\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in list1:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 150,
+   "id": "ce0bcc20-cbcb-4e38-85ca-b2ee6e9c3faf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(0, 'one')\n",
+      "(1, 'two')\n",
+      "(2, 'three')\n",
+      "(3, 'four')\n",
+      "(4, 'five')\n",
+      "(5, 'six')\n",
+      "(6, 'seven')\n",
+      "(7, 'eight')\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in enumerate(list1):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b961fcf1-83aa-4995-87dd-03dfda773f53",
+   "metadata": {},
+   "source": [
+    "Count"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 153,
+   "id": "940d3e62-eed4-4e58-8251-b40aeb8ab647",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list10 = ['one', 'two', 'three', 'four', 'one', 'one', 'two', 'three']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 155,
+   "id": "92155014-fd98-4efe-ad49-8589aca0c1ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 155,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list10.count('one') # Number of times item \"one\" occrred in the list."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 159,
+   "id": "e3ceaeed-74dd-4d96-ac74-0597d4503012",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 159,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list10.count('two') # Occurence of item 'two' in the list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 161,
+   "id": "36cb7a58-17a9-419a-a769-26a431f8b5a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 161,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list10.count('four') # Occurence of item 'four' in the list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0407b5d3-5010-4831-8f38-3fba0ebf6a43",
+   "metadata": {},
+   "source": [
+    "All / Any"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 164,
+   "id": "6905c3f9-4cf5-4cea-9eb8-2cffda672179",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "L1 = [1, 2, 3, 4, 0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "id": "96d70500-0a15-4da8-b06a-73ba49774e04",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 166,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "all(L1) # WIll Return false as one value in false (value 0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 168,
+   "id": "d769b211-4e45-4e87-8d60-a2ee93c78ad0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 168,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "any(L1) # Will Return True as we have items in the list with True value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 170,
+   "id": "559196f5-9ed6-4efd-b0ad-a97863514944",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "L2 = [1, 2, 3, 4, True, False]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 172,
+   "id": "51714dcb-199a-4f2f-a4f1-68bc11bbb7e2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 172,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "all(L2) # Returns false as one value is false"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 174,
+   "id": "b47a5a57-a3fd-48a2-8333-353bc41a3e0e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 174,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "any(L2) # Will Return True as we have items in the list with True value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 176,
+   "id": "8ce41660-76e8-4584-9eef-22d11011167a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "L3 = [1, 2, 3, True]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 178,
+   "id": "a116215c-19b4-4c92-9c53-975936e2ad45",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 178,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "all(L3) # Will return as all items in the list are True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "41513cae-95d4-4d83-a35f-c4386efd68d1",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
